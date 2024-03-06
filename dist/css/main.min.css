@@ -60,6 +60,56 @@ p {
   background-color: #db0007;
   margin-bottom: 0.5rem;
 }
+.header .dropdown {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999999;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header .dropdown button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #ffbc0d;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.header .dropdown .nav a {
+  color: #db0007;
+}
+.header .dropdown .nav ul {
+  list-style: none;
+}
+.header .dropdown .nav__menu {
+  margin-left: 5rem;
+}
+.header .dropdown .nav__menu li {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+.header .dropdown .nav__menu li .nav__submenu {
+  margin-left: 3rem;
+}
+.header .dropdown .nav__menu li .nav__submenu li {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.header .dropdown__footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+.header .dropdown__footer img {
+  margin: 0 auto 4rem;
+}
+.header .dropdown__footer a {
+  font-size: 1.3rem;
+}
 
 .footer {
   background-color: #ffbc0d;

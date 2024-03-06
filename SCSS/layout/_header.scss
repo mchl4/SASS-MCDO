@@ -1,4 +1,5 @@
-@use "../abstract/" as *;
+@use "../abstract"  as *;
+
 
 .header{
     &__wrapper{
@@ -12,9 +13,66 @@
                 height: .5rem;
                 background-color: $clr--accent;
                 margin-bottom: .5rem;
+
+            }
+        }
+    }
+
+    .dropdown{
+        position: fixed;
+        background-color: rgba($clr--neutral, 0.8);
+        z-index: 999999;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        
+        button{
+            background-color: transparent;
+            border: none;
+            font-size: 3rem;
+            color: $clr--primary;
+            padding: 1rem;
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+
+        .nav{
+            a{
+                color: $clr--accent;
+            }
+            ul{
+                list-style: none;
+            }
+            &__menu{
+                margin-left: 5rem;
+                li{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin-bottom: .6rem;
+
+                    .nav__submenu{
+                        margin-left: 3rem;
+                        li{
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__footer{
+            margin-top: 2rem;
+            img{
+                margin: 0 auto 4rem;
+            }
+            text-align: center;
+
+            a{
+                font-size: 1.3rem;
             }
         }
     }
 }
-
-
