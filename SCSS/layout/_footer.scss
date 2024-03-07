@@ -1,13 +1,22 @@
 @use "../abstract" as *;
 
 .footer{
-    background-color: $clr--primary;
+    // background-color: $clr--primary;
     padding: 5rem 0;
 
+    &__wrapper{
+        @include mediaQuery {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
     &__actions{
         margin-bottom: 4rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid(2);
+        @include mediaQuery{
+        @include grid(4);
+        }
         gap: 2rem;
         ul{
             list-style: none;
@@ -23,6 +32,7 @@
             justify-self: center;
         }
     }
+
    
     &__connect{
         ul{

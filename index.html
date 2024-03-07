@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">
 </head>
 <body>
+
     <!-- HEADER -->
     <header class="header">
         <div class="container">
@@ -17,7 +18,7 @@
 
             <!-- DROPDOWN NAVIGATION -->
             <div class="dropdown">
-            <button><i class="fas fa-chevron-right"></i></button>
+            <button class="close"><i class="fas fa-chevron-right"></i></button>
 
             <!-- NAVIGATION -->
             <nav class="nav">
@@ -79,23 +80,47 @@
     <!-- BANNER -->
     <section class="banner">
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-1.jpg" media="(min-width:460px)">
+                <source srcset="./images/slidermobile6.jpg" media="(max-width:459px)">
             <img src="./images/slider-1.jpg" alt="">
+        </picture>
         </a>
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-2.jpg" media="(min-width:460px)">
+                <source srcset="./images/slidermobile1.jpg" media="(max-width:459px)">
             <img src="./images/slider-2.jpg" alt="">
+            </picture>
         </a>
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-3.jpg" media="(min-width:460px)">
+                <source srcset="./images/slidermobile2.jpg" media="(max-width:459px)">
             <img src="./images/slider-3.jpg" alt="">
+            </picture>
         </a>
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-4.jpg" media="(min-width:460px)">
+                <source srcset="./images/slidermobile5.jpg" media="(max-width:459px)">
             <img src="./images/slider-4.jpg" alt="">
+            </picture>
         </a>
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-5.png" media="(min-width:460px)">
+                <source srcset="./images/slidermobile3.png" media="(max-width:459px)">
             <img src="./images/slider-5.png" alt="">
+            </picture>
         </a>
         <a href="#">
+            <picture>
+                <source srcset="./images/slider-6.jpg" media="(min-width:460px)">
+                <source srcset="./images/slidermobile4.jpg" media="(max-width:459px)">
             <img src="./images/slider-6.jpg" alt="">
-        </a> 
+            </picture>
+        </a>
     </section>
 
     <!-- CARDS -->
@@ -143,11 +168,10 @@
 </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer bg-primary">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__actions">
-                    <div class="dropdown__footer">
                     <img src="./images/footer.png" alt="">
                     <ul>
                         <li><img src="./images/icon-google.png" alt=""></li>
@@ -166,7 +190,6 @@
                         <li><a href="#">Family Activities</a></li>
                     </ul>
                 </div>
-                </div>
                 <div class="footer__connect">
                     <p>Follow us on</p>
                     <ul>
@@ -175,7 +198,9 @@
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
+                
             </div>
+            
         </div>
     </footer>
 
@@ -191,6 +216,22 @@
     slideBy: 'page',
     autoplay: true
   });
+
+    const toggleBtn = document.querySelector('.toggle__button')
+    const dropdown = document.querySelector('.dropdown')
+    const closeBtn = document.querySelector('.close')
+    
+    
+    toggleBtn.addEventListener('click', ()=> {
+        dropdown.classList.add('show')
+        toggleBtn.classList.add('cross')
+    })
+    closeBtn.addEventListener('click', ()=> {
+        dropdown.classList.remove('show')
+        toggleBtn.classList.remove('cross')
+    })
+    
+    
     </script>
 </body>
 </html>

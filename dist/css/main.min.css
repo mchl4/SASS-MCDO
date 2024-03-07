@@ -48,6 +48,38 @@ p {
   margin: 0 auto;
 }
 
+.bg-primary {
+  background-color: #ffbc0d;
+}
+
+.text-primary {
+  color: #ffbc0d;
+}
+
+.bg-accent {
+  background-color: #db0007;
+}
+
+.text-accent {
+  color: #db0007;
+}
+
+.bg-neutral {
+  background-color: #ffffff;
+}
+
+.text-neutral {
+  color: #ffffff;
+}
+
+.bg-dark {
+  background-color: #343a40;
+}
+
+.text-dark {
+  color: #343a40;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -59,6 +91,14 @@ p {
   height: 0.5rem;
   background-color: #db0007;
   margin-bottom: 0.5rem;
+  transition: 0.5 ease;
+}
+.header__wrapper .toggle__button.cross {
+  opacity: 0;
+}
+.header .dropdown.show {
+  opacity: 1;
+  visibility: visible;
 }
 .header .dropdown {
   position: fixed;
@@ -68,6 +108,9 @@ p {
   width: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
 }
 .header .dropdown button {
   background-color: transparent;
@@ -112,14 +155,27 @@ p {
 }
 
 .footer {
-  background-color: #ffbc0d;
   padding: 5rem 0;
+}
+@media (min-width: 42rem) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .footer__actions {
   margin-bottom: 4rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
   gap: 2rem;
+}
+@media (min-width: 42rem) {
+  .footer__actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
 }
 .footer__actions ul {
   list-style: none;
@@ -165,30 +221,52 @@ p {
   background-color: #db0007;
 }
 
-.banner {
-  position: relative;
-}
 .banner img {
+  height: 17rem;
   width: 100%;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 42rem) {
+  .banner img {
+    height: 40rem;
+  }
 }
 
 .cards__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 10rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 4rem 0;
+}
+@media (min-width: 42rem) {
+  .cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-row-gap: 6rem;
+  }
+}
+.cards a {
+  justify-self: center;
 }
 .cards .card {
   border-radius: 3rem;
   overflow: hidden;
   position: relative;
+  width: 120px;
+  height: 120px;
+}
+@media (min-width: 42rem) {
+  .cards .card {
+    width: 262px;
+    height: 262px;
+  }
 }
 .cards .card img {
+  height: 100%;
   width: 100%;
-  height: 162px;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1/1;
