@@ -1,0 +1,50 @@
+@use '../abstract' as*;
+
+.banner {
+    @include flex(center,center);
+    min-height: 40rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h1{
+        font-size: clamp(3rem, 10vw, 7rem);
+        font-weight: bolder;
+    }
+}
+
+.banner--activities {
+    background-image: url('../../images/family/family_activities1.jpeg');
+    @include mediaQuery{ 
+    background-image: url('../../images/family/family_activitiesbig1.jpeg'); 
+    }
+}
+
+.family{
+
+
+    img{
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+        @include imgCover(100%, 100%);
+    }
+
+    &__card{
+        p{
+            text-align: justify;
+            margin-top: 2rem;
+            }   
+        }  
+    &__button{
+        a{
+            justify-content: center;
+        }
+    }
+    }
+
+
+
+

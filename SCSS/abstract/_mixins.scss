@@ -17,3 +17,17 @@
     grid-template-columns: repeat($cols, 1fr);
     grid-gap: $gap;
 } 
+
+@mixin absolute ($top:0, $right:0 ,$bottom:0, $left:0) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin flex($justify:flex-start, $align: flex-start) {
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+}
