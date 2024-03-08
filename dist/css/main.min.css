@@ -17,20 +17,24 @@ body {
   font-family: "spedee-regular", arial, sans-serif;
   src: url("../../fonts/Speedee-Regular.woff");
 }
+@font-face {
+  font-family: "Speedee-Bold", arial, sans-serif;
+  src: url("../../fonts/Speedee-Bold.woff");
+}
 html {
   font-size: 10px;
 }
 
 body {
   font-family: "Spedee-regular", arial, sans-serif;
-  color: #343a40;
+  color: #000000;
   line-height: 1.6;
   font-size: 1.6rem;
 }
 
 a {
   text-decoration: none;
-  color: #343a40;
+  color: #000000;
 }
 
 h1 {
@@ -43,7 +47,7 @@ p {
 }
 
 .container {
-  max-width: 110rem;
+  max-width: 98rem;
   padding: 0 1.6rem;
   margin: 0 auto;
 }
@@ -73,11 +77,11 @@ p {
 }
 
 .bg-dark {
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 .text-dark {
-  color: #343a40;
+  color: #000000;
 }
 
 .flex {
@@ -108,6 +112,10 @@ p {
   padding: 1rem;
 }
 
+.py-1 {
+  padding: 1rem0;
+}
+
 .mb-2 {
   margin-bottom: 2rem;
 }
@@ -118,6 +126,10 @@ p {
 
 .p-2 {
   padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem0;
 }
 
 .mb-3 {
@@ -132,6 +144,10 @@ p {
   padding: 3rem;
 }
 
+.py-3 {
+  padding: 3rem0;
+}
+
 .mb-4 {
   margin-bottom: 4rem;
 }
@@ -142,6 +158,10 @@ p {
 
 .p-4 {
   padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem0;
 }
 
 .mb-5 {
@@ -156,6 +176,10 @@ p {
   padding: 5rem;
 }
 
+.py-5 {
+  padding: 5rem0;
+}
+
 .mb-6 {
   margin-bottom: 6rem;
 }
@@ -166,6 +190,10 @@ p {
 
 .p-6 {
   padding: 6rem;
+}
+
+.py-6 {
+  padding: 6rem0;
 }
 
 .mb-7 {
@@ -180,6 +208,10 @@ p {
   padding: 7rem;
 }
 
+.py-7 {
+  padding: 7rem0;
+}
+
 .mb-8 {
   margin-bottom: 8rem;
 }
@@ -190,6 +222,10 @@ p {
 
 .p-8 {
   padding: 8rem;
+}
+
+.py-8 {
+  padding: 8rem0;
 }
 
 .mb-9 {
@@ -204,6 +240,10 @@ p {
   padding: 9rem;
 }
 
+.py-9 {
+  padding: 9rem0;
+}
+
 .mb-10 {
   margin-bottom: 10rem;
 }
@@ -214,6 +254,42 @@ p {
 
 .p-10 {
   padding: 10rem;
+}
+
+.py-10 {
+  padding: 10rem0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-1-2 {
+  width: 50%;
+}
+
+.w-1-4 {
+  width: 25%;
+}
+
+.w-1-3 {
+  width: 33.3%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .header__wrapper {
@@ -555,7 +631,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40rem;
+  min-height: 35rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -574,18 +650,130 @@ p {
   }
 }
 
+.family__wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
 .family img {
-  border-radius: 2rem;
-  margin-bottom: 2rem;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
 }
-.family__card p {
+@media (min-width: 42rem) {
+  .family img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 42rem) {
+  .family__card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 42rem) {
+  .family__card .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+@media (min-width: 42rem) {
+  .family__card .container content {
+    display: flex;
+    flex-direction: column;
+  }
+  .family__card .container content div {
+    flex-grow: 1;
+  }
+}
+.family__card .container content .btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.family__card .container p {
   text-align: justify;
-  margin-top: 2rem;
 }
-.family__button a {
+.family__card .container a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.family__card .container h2 {
+  font-size: 3rem;
+}
+@media (min-width: 42rem) {
+  .family__card .container h2 {
+    font-family: "Spedee-regular", arial, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+.family__card button {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  border: hidden;
+  border-radius: 1rem;
+  width: 100%;
+  transition: 0.5 ease;
+  text-transform: uppercase;
+}
+.family__card button:hover {
+  background: #dea100;
+}
+@media (min-width: 42rem) {
+  .family__card button {
+    width: 50%;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 24rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.banner h1 {
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: bolder;
+}
+
+.banner--nxtgen {
+  background-image: url("../../images/nxtgen/nxtgen-mb.jpg");
+}
+@media (min-width: 42rem) {
+  .banner--nxtgen {
+    background-image: url("../../images/nxtgen/nxtgen2.jpg");
+  }
+}
+
+.nextgen h3 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-family: "Spedee-regular", arial, sans-serif;
+}
+.nextgen h4 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+.nextgen iframe {
+  aspect-ratio: 16/9;
+}
+.nextgen ul {
+  list-style: none;
+}
+.nextgen span {
+  color: #db0007;
 }/*# sourceMappingURL=main.min.css.map */

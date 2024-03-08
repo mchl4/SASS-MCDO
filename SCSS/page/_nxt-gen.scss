@@ -1,0 +1,47 @@
+@use '../abstract' as*;
+
+.banner {
+    @include flex(center,center);
+    min-height: 24rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h1{
+        font-size: clamp(4rem, 10vw, 7rem);
+        font-weight: bolder;
+    }
+}
+
+.banner--nxtgen {
+    background-image: url('../../images/nxtgen/nxtgen-mb.jpg');
+    @include mediaQuery{ 
+    background-image: url('../../images/nxtgen/nxtgen2.jpg'); 
+    }
+}
+
+.nextgen {
+    h3 {
+        font-size: clamp(3rem, 6vw, 5rem);
+        font-family: "Spedee-regular" ,arial, sans-serif;
+    }
+
+    h4 {
+        font-size: clamp(2rem, 6vw, 3rem);
+     
+    }
+
+    iframe {
+        aspect-ratio:  16 / 9;
+    }
+    ul{
+        list-style: none;
+    }
+    span{
+        color: $clr--accent
+    }
+    
+}

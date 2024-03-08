@@ -18,6 +18,19 @@
     grid-gap: $gap;
 } 
 
+
+@mixin grid-row($rows: 1, $gap: 1rem){
+    display: grid;
+    // grid-template-rows: repeat($rows, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin unevenGrid($cols: 1, $gap: 1rem){
+    display: grid;
+    grid-template-columns: $val;
+    grid-gap: $gap;
+}
+
 @mixin absolute ($top:0, $right:0 ,$bottom:0, $left:0) {
     position: absolute;
     top: $top;
@@ -31,3 +44,4 @@
     justify-content: $justify;
     align-items: $align;
 }
+

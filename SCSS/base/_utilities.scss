@@ -37,4 +37,28 @@ $displays: flex, grid, block, inline;
     .p-#{$i}{
         padding: #{$i}rem;
     }
+    .py-#{$i}{
+        padding: #{$i}rem0;
+    }
+}
+
+$width:(
+    "full" : 100%,
+    "1-2" : 50%,
+    "1-4" : 25%,
+    "1-3" : 33.3%,
+);
+
+@each $key, $val in $width {
+    .w-#{$key} {
+        width: #{$val};
+    }
+}
+
+$alignments: left, center, right, justify;
+
+@each $alignment in $alignments{
+    .text-#{$alignment} {
+        text-align: #{$alignment};
+    }
 }
